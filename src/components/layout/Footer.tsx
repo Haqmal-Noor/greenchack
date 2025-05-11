@@ -29,22 +29,20 @@ const Footer = () => {
 							</span>
 						</div>
 						<p className="text-gray-300 mb-6 leading-relaxed">
-							Building the future with strength, reliability, and innovation for
-							over 20 years.
+							Empowering Excellence, Ensuring Integrity and Sustainable
+							Development
 						</p>
 						<div className="flex space-x-4">
 							<a
-								href="#"
+								href="https://www.facebook.com/share/16YTmMkDFj/"
+								target="_blank"
 								className="bg-primary-800 hover:bg-primary-700 p-2 rounded-full transition-colors">
 								<Facebook size={20} />
 							</a>
+
 							<a
-								href="#"
-								className="bg-primary-800 hover:bg-primary-700 p-2 rounded-full transition-colors">
-								<Instagram size={20} />
-							</a>
-							<a
-								href="#"
+								href="https://www.linkedin.com/company/greenchack"
+								target="_blank"
 								className="bg-primary-800 hover:bg-primary-700 p-2 rounded-full transition-colors">
 								<Linkedin size={20} />
 							</a>
@@ -55,23 +53,18 @@ const Footer = () => {
 					<div>
 						<h3 className="text-xl font-bold mb-4 font-heading">Quick Links</h3>
 						<ul className="space-y-3">
-							{[
-								"Home",
-								"About",
-								"Services",
-								"Projects",
-								"Testimonials",
-								"Contact",
-							].map((item) => (
-								<li key={item}>
-									<Link
-										to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-										className="text-gray-300 hover:text-accent-400 transition-colors inline-flex items-center">
-										<ArrowRight size={14} className="mr-2" />
-										{item}
-									</Link>
-								</li>
-							))}
+							{["Home", "About", "Services", "Projects", "Contact"].map(
+								(item) => (
+									<li key={item}>
+										<Link
+											to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+											className="text-gray-300 hover:text-primary-400 transition-colors inline-flex items-center">
+											<ArrowRight size={14} className="mr-2" />
+											{item}
+										</Link>
+									</li>
+								)
+							)}
 						</ul>
 					</div>
 
@@ -82,17 +75,15 @@ const Footer = () => {
 						</h3>
 						<ul className="space-y-3">
 							{[
-								"Residential Building",
-								"Commercial Construction",
-								"Renovations",
-								"Interior Finishing",
-								"Project Management",
-								"Sustainability Consulting",
+								"Construction & Infrastructure Development",
+								"Organizational Development Consulting",
+								"Engineering & Infrastructure Development Consulting",
+								"Business, Legal & Market Advisory Services",
 							].map((service) => (
 								<li key={service}>
 									<Link
 										to="/services"
-										className="text-gray-300 hover:text-accent-400 transition-colors inline-flex items-center">
+										className="text-gray-300 hover:text-primary-400 transition-colors inline-flex items-center">
 										<ArrowRight size={14} className="mr-2" />
 										{service}
 									</Link>
@@ -108,7 +99,7 @@ const Footer = () => {
 							<li className="flex items-start">
 								<MapPin
 									size={20}
-									className="text-accent-500 mr-3 mt-1 flex-shrink-0"
+									className="text-primary-400 mr-3 mt-1 flex-shrink-0"
 								/>
 								<span className="text-gray-300">
 									Khoshhal Khan, 5th District, Kabul, Afghanistan
@@ -117,10 +108,10 @@ const Footer = () => {
 							<li className="flex items-center">
 								<Phone
 									size={20}
-									className="text-accent-500 mr-3 flex-shrink-0"
+									className="text-primary-400 mr-3 flex-shrink-0"
 								/>
 								<a
-									href="tel:+1234567890"
+									href="tel:+93775575448"
 									className="text-gray-300 hover:text-white transition-colors">
 									+93 (0) 775 575 448
 								</a>
@@ -128,7 +119,7 @@ const Footer = () => {
 							<li className="flex items-center">
 								<Mail
 									size={20}
-									className="text-accent-500 mr-3 flex-shrink-0"
+									className="text-primary-400 mr-3 flex-shrink-0"
 								/>
 								<a
 									href="mailto:info@greenchack.com"

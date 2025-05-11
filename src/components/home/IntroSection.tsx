@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import {
-	Award,
-	Clock,
-	ShieldCheck,
+	Settings,
+	Target,
+	Briefcase,
 	Leaf,
 	Users,
 	Lightbulb,
@@ -12,40 +12,40 @@ import Card from "../ui/Card";
 
 const features = [
 	{
-		icon: <ShieldCheck size={40} className="text-primary-600" />,
-		title: "Safety",
+		icon: <Briefcase size={40} className="text-primary-600" />,
+		title: "Industry Expertise",
 		description:
-			"Commitment to maintaining the highest safety standards on every construction site, protecting our workers and clients.",
+			"GreenChack is backed by a team of highly skilled staf with extensive experience across multiple sectors, including humanitarian aid, engineering, business strategy, and infrastructure development. Our professionals bring in-depth knowledge and hands-on experience in managing complex projects, securing funding, and optimizing operations to help clients achieve their strategic objectives efficiently.",
 	},
 	{
-		icon: <Award size={40} className="text-primary-600" />,
-		title: "Quality",
+		icon: <Settings size={40} className="text-primary-600" />,
+		title: "Tailored Solutions",
 		description:
-			"Premium materials and expert craftsmanship to deliver construction projects that stand the test of time.",
+			"We recognize that every organization, business, and project has distinct needs and challenges. Our services are carefully customized to align with the specific goals of our clients. By conducting in-depth assessments and leveraging industry best practices, we design strategic, practical, and innovative solutions that maximize efficiency, enhance performance, and drive sustainable growth.",
 	},
 	{
-		icon: <Clock size={40} className="text-primary-600" />,
-		title: "Timeliness",
+		icon: <Target size={40} className="text-primary-600" />,
+		title: "Results-Driven Approach",
 		description:
-			"Strict adherence to project timelines and deadlines, ensuring your construction project finishes on schedule.",
+			"At GreenChack, we measure success through impact. Our methodology emphasizes data-driven decision-making, rigorous performance monitoring, and continuous improvement to ensure that every initiative delivers measurable outcomes. We work closely with clients to track progress, optimize strategies, and achieve long-term success in their humanitarian, business, and infrastructure endeavors.",
 	},
 	{
 		icon: <Leaf size={40} className="text-primary-600" />,
-		title: "Sustainability",
+		title: "Sustainability Focus",
 		description:
-			"We prioritize eco-friendly materials and energy-efficient designs to reduce our environmental footprint.",
+			"GreenChack is committed to integrating sustainability into every aspect of our work. Whether it’s engineering environmentally friendly infrastructure, promoting renewable energy solutions, or advising on climate resilience strategies, we prioritize long-term, eco-conscious solutions that contribute to sustainable development. Our approach ensures that businesses, NGOs, and projects not only meet today’s needs but also create lasting benefits for future generations.",
 	},
 	{
 		icon: <Users size={40} className="text-primary-600" />,
-		title: "Customer Focus",
+		title: "Strong Network",
 		description:
-			"Transparent communication and a client-first approach ensure your vision is always our priority.",
+			"With well-established relationships across international donor agencies, government bodies, NGOs, and private sector stakeholders, GreenChack has a robust network that enhances collaboration and resource mobilization. Our connections with major funding organizations, such as the UN, USAID, and the EU, enable us to support clients in securing financial and technical resources essential for project success.",
 	},
 	{
 		icon: <Lightbulb size={40} className="text-primary-600" />,
 		title: "Innovation",
 		description:
-			"We implement cutting-edge technologies and creative solutions to deliver forward-thinking construction services.",
+			"We leverage state-of-the-art technologies and innovative, tailor-made solutions to provide services that are not only efficient and high-quality but also designed to anticipate future needs. Our commitment to forward-thinking practices ensures that every project we undertake is built with precision, sustainability, and long-term value in mind, setting new standards in the industry.",
 	},
 ];
 
@@ -67,7 +67,7 @@ const IntroSection = () => {
 			<div className="container mx-auto px-4 md:px-6">
 				<SectionHeader
 					title="GreenChack"
-					subtitle="With over 5 years of industry experience, we've established ourselves as a leader in construction services. From residential to commercial projects, we bring expertise, quality and professionalism to every build."
+					subtitle="At GreenChack, we are dedicated to driving impactful change through innovative construction, engineering, and consulting services across Afghanistan. With a deep understanding of the local landscape and a commitment to excellence, we empower organizations, businesses, and communities to build sustainable, resilient futures. Explore how our tailored solutions can turn your vision into reality."
 				/>
 
 				<motion.div

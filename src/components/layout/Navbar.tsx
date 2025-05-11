@@ -61,13 +61,13 @@ const Navbar = () => {
 							key={link.path}
 							to={link.path}
 							className={({ isActive }) =>
-								`font-medium hover:text-accent-500 transition-colors ${
+								`font-medium hover:text-primary-500 transition-colors ${
 									scrolled
 										? isActive
 											? "text-primary-600"
 											: "text-gray-800"
 										: isActive
-										? "text-accent-400"
+										? "text-primary-400"
 										: "text-white"
 								}`
 							}>
@@ -75,7 +75,7 @@ const Navbar = () => {
 						</NavLink>
 					))}
 					<a
-						href="tel:+93775 575 448"
+						href="tel:+93775575448"
 						className="flex items-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-all ml-4">
 						<Phone size={18} className="mr-2" />
 						+93 (0) 775 575 448
@@ -116,7 +116,7 @@ const Navbar = () => {
 										to={link.path}
 										className={({ isActive }) =>
 											`text-xl font-medium ${
-												isActive ? "text-accent-400" : "text-white"
+												isActive ? "text-primary-400" : "text-white"
 											}`
 										}
 										onClick={closeMenu}>
@@ -124,11 +124,11 @@ const Navbar = () => {
 									</NavLink>
 								))}
 								<a
-									href="tel:+1234567890"
-									className="flex items-center bg-accent-500 hover:bg-accent-600 text-primary-900 px-6 py-3 rounded-md transition-all mt-4 text-xl"
+									href="tel:+93775575448"
+									className="flex items-center bg-primary-600 hover:bg-accent-600 text-white px-6 py-3 rounded-md transition-all mt-4 text-xl"
 									onClick={closeMenu}>
 									<Phone size={20} className="mr-2" />
-									(123) 456-7890
+									+93 (0) 775 575 448
 								</a>
 							</nav>
 						</motion.div>

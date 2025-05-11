@@ -229,7 +229,7 @@ const ContactPage = () => {
 												className="block mb-2 text-gray-700 font-medium">
 												Subject*
 											</label>
-											<select
+											<input
 												id="subject"
 												name="subject"
 												value={formData.subject}
@@ -239,18 +239,8 @@ const ContactPage = () => {
 												disabled={
 													formStatus === "submitting" ||
 													formStatus === "success"
-												}>
-												<option value="">Select a subject</option>
-												<option value="General Inquiry">General Inquiry</option>
-												<option value="Project Quote">Project Quote</option>
-												<option value="Career Opportunities">
-													Career Opportunities
-												</option>
-												<option value="Existing Project">
-													Existing Project
-												</option>
-												<option value="Other">Other</option>
-											</select>
+												}
+											/>
 										</div>
 									</div>
 

@@ -1,53 +1,53 @@
 import { motion } from "framer-motion";
 import PageHeader from "../components/shared/PageHeader";
 import SectionHeader from "../components/shared/SectionHeader";
-import { Building, Users, Compass, Calendar } from "lucide-react";
+import { Star, ShieldCheck, Handshake, BarChart2 } from "lucide-react";
 
 // Sample team members data
-const teamMembers = [
-	{
-		id: 1,
-		name: "Robert Johnson",
-		position: "CEO & Founder",
-		image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
-		bio: "With over 25 years in the construction industry, Robert founded SolidBuild Co. with a vision to deliver premium quality construction services.",
-	},
-	{
-		id: 2,
-		name: "Sarah Martinez",
-		position: "Chief Architect",
-		image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
-		bio: "Sarah brings creative vision and technical expertise to every project, designing innovative spaces that meet client needs.",
-	},
-	{
-		id: 3,
-		name: "Michael Chen",
-		position: "Construction Manager",
-		image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
-		bio: "Michael ensures all construction activities run smoothly, maintaining the highest standards of quality and safety.",
-	},
-	{
-		id: 4,
-		name: "Lisa Anderson",
-		position: "Interior Design Lead",
-		image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
-		bio: "Lisa specializes in creating beautiful, functional interior spaces that perfectly complement the architectural design.",
-	},
-	{
-		id: 5,
-		name: "James Wilson",
-		position: "Civil Engineer",
-		image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
-		bio: "James brings technical precision to our structural engineering, ensuring buildings are safe, durable, and innovative.",
-	},
-	{
-		id: 6,
-		name: "Emily Thompson",
-		position: "Project Coordinator",
-		image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
-		bio: "Emily keeps projects on schedule and clients informed, serving as the central point of communication for all stakeholders.",
-	},
-];
+// const teamMembers = [
+// 	{
+// 		id: 1,
+// 		name: "Robert Johnson",
+// 		position: "CEO & Founder",
+// 		image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+// 		bio: "With over 25 years in the construction industry, Robert founded GreenChack with a vision to deliver premium quality construction services.",
+// 	},
+// 	{
+// 		id: 2,
+// 		name: "Sarah Martinez",
+// 		position: "Chief Architect",
+// 		image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+// 		bio: "Sarah brings creative vision and technical expertise to every project, designing innovative spaces that meet client needs.",
+// 	},
+// 	{
+// 		id: 3,
+// 		name: "Michael Chen",
+// 		position: "Construction Manager",
+// 		image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+// 		bio: "Michael ensures all construction activities run smoothly, maintaining the highest standards of quality and safety.",
+// 	},
+// 	{
+// 		id: 4,
+// 		name: "Lisa Anderson",
+// 		position: "Interior Design Lead",
+// 		image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+// 		bio: "Lisa specializes in creating beautiful, functional interior spaces that perfectly complement the architectural design.",
+// 	},
+// 	{
+// 		id: 5,
+// 		name: "James Wilson",
+// 		position: "Civil Engineer",
+// 		image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+// 		bio: "James brings technical precision to our structural engineering, ensuring buildings are safe, durable, and innovative.",
+// 	},
+// 	{
+// 		id: 6,
+// 		name: "Emily Thompson",
+// 		position: "Project Coordinator",
+// 		image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+// 		bio: "Emily keeps projects on schedule and clients informed, serving as the central point of communication for all stakeholders.",
+// 	},
+// ];
 
 // Company history timeline
 const timelineEvents = [
@@ -91,8 +91,8 @@ const AboutPage = () => {
 			exit={{ opacity: 0 }}>
 			<PageHeader
 				title="About GreenChack"
-				subtitle="Our story, our team, and our journey in the construction industry."
-				backgroundImage="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+				subtitle=""
+				backgroundImage="/images/hero.jpg"
 			/>
 
 			{/* Company Story */}
@@ -105,33 +105,41 @@ const AboutPage = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.7 }}>
 							<h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
-								<span className="text-primary-700">GreenChack:</span> Your Strategic Partner for Resilient
-								Growth in Afghanistan
+								<span className="text-primary-700">GreenChack:</span> Your
+								Strategic Partner for Resilient Growth in Afghanistan
 							</h2>
 							<p className="text-gray-700 mb-6 leading-relaxed">
 								GreenChack is a premier construction and consulting firm
 								committed to driving positive change by empowering
 								organizations, businesses, and infrastructure projects across
-								Afghanistan. With a team of highly skilled professionals, we
-								offer innovative, data-driven, and results-oriented solutions
-								that enhance operational efficiency, ensure regulatory
-								compliance, and promote long-term sustainability. At GreenChack,
-								we understand the unique challenges faced by NGOs, businesses,
-								and development initiatives in Afghanistan’s evolving landscape.
-								Our comprehensive consulting services are designed to help our
-								clients navigate these complexities, mitigate risks, and seize
-								opportunities for growth. Whether it’s project implementation,
-								improving project implementation, optimizing business
-								operations, securing funding or advancing infrastructure
-								development, we provide strategic guidance that translates into
-								tangible success. Our client-centric approach, combined with
-								deep industry insights and a commitment to excellence, enables
-								us to deliver customized solutions that drive measurable impact.
-								By fostering collaboration, innovation, and best practices, we
-								support our partners in achieving their goals while contributing
-								to Afghanistan’s economic and social progress. With GreenChack
-								as your trusted partner, you gain access to expertise that
-								empowers you to build a stronger, more resilient future.
+								Afghanistan. As a sister company of Hemayat Etmenan Construction
+								Company (HECC), GreenChack builds upon a strong foundation of
+								engineering excellence, field experience, and local trust to
+								deliver impactful solutions that meet the highest national and
+								international standards. With a team of highly skilled
+								professionals, we provide innovative, data-driven, and
+								results-oriented services that enhance operational efficiency,
+								ensure regulatory compliance, and promote long-term
+								sustainability. We understand the unique challenges faced by
+								non-governmental organizations, businesses, and development
+								initiatives operating in Afghanistan's evolving landscape. Our
+								comprehensive consulting services are tailored to help clients
+								navigate complexity, mitigate risks, and seize opportunities for
+								growth. Whether it's launching new projects, optimizing
+								operations, securing funding, or advancing infrastructure
+								development, GreenChack offers strategic guidance that
+								transforms vision into measurable success. On the construction
+								side, we turn your dreams into reality—delivering high-quality
+								projects at affordable costs while upholding stringent standards
+								and time efficiency. Our client-centric approach, deep industry
+								insights, and commitment to excellence enable us to deliver
+								customized solutions that create meaningful impact. By fostering
+								innovation, collaboration, and best practices, we support our
+								partners in achieving their goals while contributing to
+								Afghanistan's economic and social development. With GreenChack
+								as your trusted partner, and the legacy of HECC behind us, you
+								gain access to proven expertise that empowers you to build a
+								stronger, more resilient future.
 							</p>
 						</motion.div>
 						<motion.div
@@ -141,8 +149,8 @@ const AboutPage = () => {
 							transition={{ duration: 0.7 }}>
 							<div className="rounded-lg overflow-hidden shadow-medium">
 								<img
-									src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg"
-									alt="SolidBuild Construction Team"
+									src="/images/about.jpg"
+									alt="GreenChack"
 									className="w-full h-full object-cover"
 								/>
 							</div>
@@ -162,28 +170,29 @@ const AboutPage = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
 						{[
 							{
-								icon: <Building size={40} className="text-primary-600" />,
-								title: "Quality",
+								icon: <Star size={40} className="text-primary-600" />,
+								title: "Excellence",
 								description:
-									"We are committed to delivering the highest standard of construction, using premium materials and expert craftsmanship.",
+									"Delivering high-quality, results-driven construction and consulting solutions.",
 							},
 							{
-								icon: <Users size={40} className="text-primary-600" />,
+								icon: <ShieldCheck size={40} className="text-primary-600" />,
 								title: "Integrity",
 								description:
-									"Honesty and transparency guide all our client relationships and business practices.",
+									"Upholding transparency, ethical business practices, and full accountability in everything we do.",
+							},
+
+							{
+								icon: <Handshake size={40} className="text-primary-600" />,
+								title: "Collaboration",
+								description:
+									"Building strong partnerships to achieve mutual success and long-term impact.",
 							},
 							{
-								icon: <Compass size={40} className="text-primary-600" />,
-								title: "Innovation",
+								icon: <BarChart2 size={40} className="text-primary-600" />,
+								title: "Impact",
 								description:
-									"We continuously explore new methods, materials, and technologies to improve our construction processes.",
-							},
-							{
-								icon: <Calendar size={40} className="text-primary-600" />,
-								title: "Reliability",
-								description:
-									"Meeting deadlines and keeping promises is fundamental to how we operate and serve our clients.",
+									"Driving meaningful, measurable change through effective and strategic solutions.",
 							},
 						].map((value, index) => (
 							<motion.div
@@ -207,37 +216,33 @@ const AboutPage = () => {
 			{/* Team Section */}
 			<section className="py-20">
 				<div className="container mx-auto px-4 md:px-6">
-					<SectionHeader
-						title="Meet Our Team"
-						subtitle="The skilled professionals who bring our projects to life."
-					/>
+					<div className="mb-12 md:mb-16 text-center">
+						<motion.h2
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true, margin: "-100px" }}
+							transition={{ duration: 0.7 }}
+							className="text-3xl md:text-4xl font-bold font-heading mb-4">
+							<span className="text-primary-700">Our Team</span>
+						</motion.h2>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-						{teamMembers.map((member, index) => (
-							<motion.div
-								key={member.id}
-								initial={{ opacity: 0, y: 30 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
-								className="bg-white rounded-lg shadow-soft overflow-hidden group">
-								<div className="h-80 overflow-hidden">
-									<img
-										src={member.image}
-										alt={member.name}
-										className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-									/>
-								</div>
-								<div className="p-6">
-									<h3 className="text-xl font-bold mb-1 font-heading">
-										{member.name}
-									</h3>
-									<p className="text-primary-600 mb-4">{member.position}</p>
-									<p className="text-gray-600">{member.bio}</p>
-								</div>
-							</motion.div>
-						))}
+						<motion.p
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true, margin: "-100px" }}
+							transition={{ duration: 0.7, delay: 0.2 }}
+							className="text-gray-600 text-lg max-w-2xl mx-auto">
+							At GreenChack, our team is the heart of our success. Comprised of
+							highly skilled professionals with diverse expertise in
+							construction, engineering, and consulting, we are united by a
+							shared commitment to excellence and sustainable development. Each
+							team member brings unique insights and innovative solutions to the
+							table, ensuring we deliver the highest quality service to our
+							clients. Together, we drive positive change and build a stronger
+							future for Afghanistan.
+						</motion.p>
 					</div>
+					<p></p>
 				</div>
 			</section>
 
@@ -246,7 +251,7 @@ const AboutPage = () => {
 				<div className="container mx-auto px-4 md:px-6">
 					<SectionHeader
 						title="Our Journey"
-						subtitle="Key milestones in the evolution of SolidBuild Co."
+						subtitle="Key milestones in the evolution of GreenChack"
 					/>
 
 					<div className="relative mt-16">
@@ -304,16 +309,19 @@ const AboutPage = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.7 }}
 						className="max-w-4xl mx-auto text-center">
-						<Quote size={60} className="mx-auto mb-8 text-accent-400" />
+						<Quote size={60} className="mx-auto mb-8 text-primary-400" />
 						<p className="text-2xl md:text-3xl italic mb-8 leading-relaxed">
-							"Our success isn't measured by the buildings we construct, but by
-							the relationships we build and the communities we help create. At
-							SolidBuild, we're committed to excellence in every brick we lay
-							and every project we complete."
+							"At GreenChack, we are committed to delivering innovative,
+							sustainable solutions that drive growth and create lasting impact.
+							Our mission is to empower organizations and communities across
+							Afghanistan, providing expert construction and consulting services
+							that meet the highest standards of excellence and integrity.
+							Together, we are building a brighter, more resilient future for
+							Afghanistan."
 						</p>
 						<div className="flex flex-col items-center">
 							<p className="font-bold text-xl mb-1">Ahmad Khalid Slimankhil</p>
-							<p className="text-accent-400">CEO & Founder</p>
+							<p className="text-primary-400">CEO & Founder</p>
 						</div>
 					</motion.div>
 				</div>
