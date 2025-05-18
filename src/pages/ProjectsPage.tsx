@@ -426,6 +426,150 @@ const ProjectsPage = () => {
 
 			{/* Project Detail Modal */}
 			{/* ... modal code remains unchanged ... */}
+			{/* Project Detail Modal */}
+			<AnimatePresence>
+				{selectedProject && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 md:p-8"
+						onClick={closeProject}>
+						<motion.div
+							initial={{ scale: 0.9, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							exit={{ scale: 0.9, opacity: 0 }}
+							className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto"
+							onClick={(e) => e.stopPropagation()}>
+							{/* Close Button */}
+							<button
+								onClick={closeProject}
+								className="absolute top-4 right-4 bg-white p-2 rounded-full z-10">
+								<X size={24} />
+							</button>
+
+							<div className="grid grid-cols-1 lg:grid-cols-2">
+								{/* Image Gallery */}
+								<div className="relative h-[300px] md:h-[500px] lg:h-full bg-gray-900">
+									{selectedProject.images.map((img, index) => (
+										<div
+											key={index}
+											className={`absolute inset-0 transition-opacity duration-500 ${
+												index === currentImageIndex
+													? "opacity-100"
+													: "opacity-0 pointer-events-none"
+											}`}>
+											<img
+												src={img}
+												alt={`${selectedProject.title} - Image ${index + 1}`}
+												className="w-full h-full object-cover"
+											/>
+										</div>
+									))}
+
+									{/* Navigation Arrows */}
+									{selectedProject.images.length > 1 && (
+										<>
+											<button
+												onClick={(e) => {
+													e.stopPropagation();
+													prevImage();
+												}}
+												className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round">
+													<path d="M15 18l-6-6 6-6" />
+												</svg>
+											</button>
+											<button
+												onClick={(e) => {
+													e.stopPropagation();
+													nextImage();
+												}}
+												className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round">
+													<path d="M9 18l6-6-6-6" />
+												</svg>
+											</button>
+										</>
+									)}
+
+									{/* Image Counter */}
+									<div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+										{currentImageIndex + 1} / {selectedProject.images.length}
+									</div>
+								</div>
+
+								{/* Project Details */}
+								<div className="p-8">
+									<div className="bg-primary-600 text-primary-50 text-sm font-medium inline-block px-3 py-1 rounded mb-3">
+										{selectedProject.category}
+									</div>
+									<h3 className="text-2xl md:text-3xl font-bold mb-3 font-heading">
+										{selectedProject.title}
+									</h3>
+									<p className="text-gray-600 mb-6">
+										{selectedProject.location} | {selectedProject.year}
+									</p>
+
+									<div className="mb-6">
+										<h4 className="text-lg font-bold mb-2 font-heading">
+											Project Details
+										</h4>
+										<p className="text-gray-700 leading-relaxed">
+											{selectedProject.description}
+										</p>
+									</div>
+
+									<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+										<div>
+											<h4 className="text-lg font-bold mb-1 font-heading">
+												Client
+											</h4>
+											<p className="text-gray-700">{selectedProject.client}</p>
+										</div>
+
+										<div>
+											<h4 className="text-lg font-bold mb-1 font-heading">
+												Category
+											</h4>
+											<p className="text-gray-700">
+												{selectedProject.category}
+											</p>
+										</div>
+									</div>
+
+									<div>
+										<h4 className="text-lg font-bold mb-2 font-heading">
+											Outcome
+										</h4>
+										<p className="text-gray-700 leading-relaxed">
+											{selectedProject.outcome}
+										</p>
+									</div>
+								</div>
+							</div>
+						</motion.div>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</motion.div>
 	);
 };
