@@ -110,8 +110,8 @@ const projects = [
 		category: "Engineering & infrastructure Development Consulting",
 		location: "Kandahar, Afghanistan",
 		year: 2024,
-		thumbnail: "/images/projects/adalat-assessment.jpg",
-		images: ["/images/projects/adalat-assessment.jpg"],
+		thumbnail: "/images/projects/adalat-gozar.jpg",
+		images: ["/images/projects/adalat-gozar.jpg"],
 		description:
 			"The Adalat Gozar Water Supply Network Project Re-assessment aimed to thoroughly evaluate the existing water supply infrastructure in the Adalat Gozar area of Kandahar. Commissioned by HECC in partnership with the International Committee of the Red Cross (ICRC), the project focused on identifying technical gaps, operational challenges, and the overall condition of the water distribution network.",
 		client: "HECC and ICRC",
